@@ -52,7 +52,7 @@ var background = function (window) {
       moon.scaleY = 1.5;
       background.addChild(moon);
 
-      for (var i = 100; (i = 100); i++) {
+      for (var i = 0; i < 100; i++) {
         var circle = draw.circle(10, "white", "LightGray", 2);
         circle.x = canvasWidth * Math.random();
         circle.y = groundY * Math.random();
