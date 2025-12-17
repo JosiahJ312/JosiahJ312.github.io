@@ -59,7 +59,19 @@ var background = function (window) {
         background.addChild(circle);
       }
       // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-
+for (var i = 0; i < 5; ++i) {
+  var buildingHeight = 300;
+  var building = draw.rect(75, buildingHeight, "LightGray", "Black", 1);
+  building.x = 200 * i;
+  building.y = groundY - buildingHeight;
+  background.addChild(building);
+  buildings.push(building);
+}
+building.x = building.x - 1
+building.y = building.y - 1
+if (building.x < -200){
+  building.x = canvasHeight
+}
       // TODO 3: Part 1 - Add a tree
       tree = draw.bitmap("img/tree.png");
       tree.x = 0;
@@ -83,6 +95,10 @@ var background = function (window) {
       }
 
       // TODO 4: Part 2 - Parallax
+for (var i = 0; i < myArray.length; i++) {
+  var eachElement = myArray[i];
+}
+  // code to do something with each element
     } // end of update function - DO NOT DELETE
 
     /* Make a createjs Container for the background and let it know about the render and upate functions*/
