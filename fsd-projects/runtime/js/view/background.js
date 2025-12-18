@@ -91,9 +91,11 @@ for (var i = 0; i < 5; ++i) {
       }
 
       // TODO 4: Part 2 - Parallax
-for (var i = 0; i < buildings.length; i++) {
-  var eachElement = buildings[i];
-building.x = building.x - 1;
+for (var i = 0; i < building.length; i++) {
+  var building = building[i];
+
+  building.x = building.x - 1;''
+
 if (building.x < -200){
   building.x = canvasHeight
 }
