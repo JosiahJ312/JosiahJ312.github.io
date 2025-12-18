@@ -22,11 +22,56 @@ var runLevels = function (window) {
      var damageFromObstacle = 10;
      var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
     sawBladeHitZone.x = 400;
-    sawBladeHitZone.y = 100;
+    sawBladeHitZone.y = 200;
     game.addGameItem(sawBladeHitZone);
     var obstacleImage = draw.bitmap("img/sawblade.png");
     sawBladeHitZone.addChild(obstacleImage);
     function startLevel() {
+
+      createSawBlade
+      createSawBlade.x = createSawBlade.x
+      createSawBlade.y = createSawBlade.y
+      var enemy = game.createGameItem("enemy", 25);
+      var redSquare = draw.rect(50, 50, "red");
+      redSquare.x = -25;
+      redSquare.y = -25;
+      enemy.addChild(redSquare);
+      enemy.x = 400;
+      enemy.y = groundY - 50;
+      game.addGameItem(enemy);
+      enemy.onPlayerCollision = function () {};
+      game.increaseScore(100);
+enemy.fadeOut();
+
+function createEnemy(x, y) {
+  // all code from TODO 11 and 12
+}
+createEnemy(400, groundY - 10);
+createEnemy(800, groundY - 100);
+createEnemy(1200, groundY - 50);
+var levelData = [
+  {
+    name: "Robot Romp",
+    number: 1,
+    speed: -3,
+    gameItems: [
+      { type: "sawblade", x: 400, y: groundY },
+      { type: "sawblade", x: 600, y: groundY },
+      { type: "sawblade", x: 900, y: groundY },
+    ],
+  },
+  {
+    name: "Robot Rampage",
+    number: 2,
+    speed: -3,
+    gameItems: [
+      { type: "sawblade", x: 400, y: groundY },
+      { type: "sawblade", x: 600, y: groundY },
+      { type: "sawblade", x: 900, y: groundY },
+    ],
+  },
+];
+{ "type": "reward", "x": 2000, "y": groundY - 60},
       // TODO 13 goes below here
 
 
